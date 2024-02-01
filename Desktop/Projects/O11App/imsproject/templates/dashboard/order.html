@@ -1,0 +1,155 @@
+{% extends 'partials/base.html'%}
+{% block title%} Order Page {% endblock %}
+
+{% block content %}
+
+ <!--Tiles-->
+ {% include 'partials/topnav.html' %}
+ 
+  <!--Start separation-->
+<!--<div class="container">
+    <h3 class="text-center bg-warning my-4 md-4 text-white">Pending Orders</h3>
+</div>-->
+<!--End separation-->
+    <!-- Start order page code-->
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-md-4">
+                <div class="border p-3 bg-white">
+                    <h4>
+                        Create Orders
+                    </h4>
+                    <hr>
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Customer Name</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          </div>
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Part Name</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Part Serial Number</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Quantity</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Price</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Ordered By</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <select class="form-select my-4 mb-3" aria-label="Default select example">
+                                <option selected>Category</option>
+                                 <option value="1">One</option>
+                                <option value="2">Two</option>
+                                 <option value="3">Three</option>
+                            </select>
+                            <div class="my-4 mb-4 form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                        <input class="btn btn-success btn-block" type="submit" value="Generate Order">
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-md-8">
+                <table class="table bg-white table-hover">
+                    <thead class="bg-info">
+                        <tr class="text-white text-center">
+                            <th scope="col">Product</th>
+                            <th scope="col">Ordered By</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for orders in orders %}
+                        <tr>
+                            <td class="text-center">{{ orders.Product}}</td>
+                            <td class="text-center">{{ orders.Staff }}</td>
+                            <td class="text-center">{{ orders.order_quantity }}</td>
+                            <td class="text-center">{{ orders.Price }}</td>
+                            <td class="text-center">{{ orders.date }}</td>
+                           <!-- <td class="text-center">Aws Hussain</td>
+                            <td>
+                                <a class="btn btn-info btn-sm" href="">Approve</a>
+                                <a class="btn btn-danger btn-sm" href="">Decline</a>
+                            </td> -->
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- End of order page code-->
+{% endblock %}
+
+{% block approved %}
+
+  <!--Start separation-->
+<!--  <div class="container">
+    <h3 class="text-center bg-success my-4 md-4 text-white">Approved Orders</h3>
+</div>-->
+<!--End separation-->
+<!-- Start of active orders-->
+<!--
+<div class="container">
+    <div class="row my-4">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+            <table class="table bg-white table-hover">
+                <thead class="bg-info">
+                    <tr class="text-white">
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Part Name</th>
+                        <th scope="col">Part Serial Number</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Ordered By</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">company1</td>
+                        <td class="text-center">Part1</td>
+                        <td class="text-center">123</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">100$</td>
+                        <td class="text-center">Aws Hussain</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">company2</td>
+                        <td class="text-center">Part2</td>
+                        <td class="text-center">456</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">200$</td>
+                        <td class="text-center">Lionel Messi</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">company3</td>
+                        <td class="text-center">Part2</td>
+                        <td class="text-center">789</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">300$</td>
+                        <td class="text-center">Cristiano Ronaldo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+-->
+<!-- Start of active orders-->
+{% endblock %}

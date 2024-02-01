@@ -1,0 +1,59 @@
+<!--Start of upper tiles of the page code-->
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header text-white bg-info">
+                        Information
+                    </div>
+                    <div class="card-body">
+                        <marquee behavior="" direction="">
+                            <h3 class="my-4">Order Information</h3>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-white bg-info">
+                        Overview
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a class="text-decoration-none text-dark" href="{% url 'dashboard-staff' %}">
+                                    <div class="card my-card text-center shadow p-3">
+                                        <h4>
+                                            Staff 
+                                            <i class="fa-sharp fa-solid fa-users"></i>
+                                        </h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="text-decoration-none text-dark" href="{% url 'dashboard-inventory' %}">
+                                    <div class="card my-card text-center shadow p-3">
+                                        <h4>
+                                            Inventory 
+                                            <i class="fa-solid fa-warehouse"></i>
+                                        </h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="text-decoration-none text-dark" href="{% url 'dashboard-order' %}">
+                                    <div class="card my-card text-center shadow p-3">
+                                        <h4>
+                                            Orders 
+                                            <i class="fa-solid fa-truck-fast"></i>
+                                        </h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+<!--End of upper tiles of the page code-->
