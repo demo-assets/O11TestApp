@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'crispy_forms',
     'crispy_bootstrap5',
-    #'elasticapm.contrib.django',
+    'elasticapm.contrib.django',
 ]
 
 ELASTIC_APM = {
@@ -52,10 +52,10 @@ ELASTIC_APM = {
   'SERVICE_NAME': 'Inventory System - Python App',
 
   # Use if APM Server requires a token
-  'SECRET_TOKEN': 'xuBXb31QcbbwPh2uIE',
+  'SECRET_TOKEN': 'APM TOKEN',
 
   # Set custom APM Server URL (default: http://localhost:8200)
-  'SERVER_URL': 'https://0bb07dea502247f395455c4dfc075bda.apm.us-east-2.aws.elastic-cloud.com:443',
+  'SERVER_URL': 'YOUR ELASTIC SEVRVER URL I.e., https://0bb07dea502247f3954.elastic-cloud.com:443',
 
   'ENVIRONMENT': 'my-environment',
   'span_compression_enabled': 'True',
@@ -97,12 +97,13 @@ WSGI_APPLICATION = 'imsproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
+# Default SQLite Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 #postgresql
 #DATABASES = {
@@ -110,7 +111,7 @@ WSGI_APPLICATION = 'imsproject.wsgi.application'
 #        'ENGINE': 'django.db.backends.postgresql',
 #        'NAME': 'test',
 #        'USER': 'postgres',
-#        'PASSWORD': 'admin',
+#        'PASSWORD': 'test',
 #        'HOST': 'localhost',
 #        'PORT': '5432',
 #    }
@@ -121,9 +122,9 @@ WSGI_APPLICATION = 'imsproject.wsgi.application'
 #       'ENGINE': 'django.db.backends.postgresql',
 #        'NAME': 'test',
 #        'USER': 'postgres',
-#        'PASSWORD': 'admin',
-#        'HOST': '104.154.251.145',
-#        'PORT':'5432'
+#        'PASSWORD': 'PASSWORD',
+#        'HOST': '',
+#        'PORT':''
 #    }
 #}
 
@@ -132,9 +133,9 @@ WSGI_APPLICATION = 'imsproject.wsgi.application'
 #    "default": {
 #        "ENGINE": "django_pyodbc",
 #        "NAME": "TestDB",
-#        "USER": "SA",
-#        "PASSWORD": "!@#QWEasdzxc",
-#        "HOST": "20.124.203.100",
+#        "USER": "test",
+#        "PASSWORD": "PASSWORD",
+#        "HOST": "",
 #        "PORT": "1433",
 #        "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
 #        },
